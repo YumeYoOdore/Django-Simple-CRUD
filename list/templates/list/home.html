@@ -1,0 +1,18 @@
+{% extends 'list/template.html' %}
+{% block content %}
+
+<h1>Add some elements here</h1>
+{% for element in list %}
+    <ul>
+        <li>
+            {{ element }}
+        </li>
+        <button><a href="{% url 'remove' element.id %}">Remove element</a></button>
+        <button><a href="{% url 'edit' element.id %}">Edit element</a></button>
+        
+    </ul>
+{% endfor %}
+
+<a href="{% url 'add' %}"><button>Add element</button></a>
+
+{% endblock %}

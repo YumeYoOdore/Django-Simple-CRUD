@@ -1,0 +1,10 @@
+{% extends 'list/template.html' %}
+{% block content %}
+
+<form method="post">
+    {% csrf_token %}
+    {{ form }}
+    <button>Send</button>
+</form>
+
+{%  endblock %}
